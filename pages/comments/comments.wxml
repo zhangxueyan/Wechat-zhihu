@@ -1,0 +1,40 @@
+<!--index.wxml-->
+
+<view class="container">
+  <view class="comment-title">{{longs.length+shorts.length}}条长评论</view>
+  <view class="comment-subt" bindtap="toggleON" data-type="long">
+     <view>{{longs.length}}条长评论</view>
+     <image src="../../icons/arrow1.png" class="comment-arrow" wx:if="{{isOpen==true}}"></image>
+     <image src="../../icons/arrow2.png" class="comment-arrow" wx:elif="{{isOpen==false}}"></image>
+  </view>
+  <view wx:for="{{longs}}" wx:key="{{item.id}}" class="comment-item" wx:if="{{isOpen}}">
+    <image src="{{item.avatar}}" class="comment-avatar"></image>
+    <view class="comment-info">
+       <view class="comment-author">{{item.author}}</view> 
+       <view class="comment-cont">{{item.content}}</view> 
+       <view class="comment-time">{{item.time}}</view>  
+       <view class="comment-zan" bindtap="toggleZan" data-likes="{{item.likes}}">
+          <image src="../../icons/zan.png"></image>
+          <text>{{item.likes}}</text>
+       </view>
+    </view>
+  </view>
+
+  <view class="comment-subt" bindtap="toggleON" data-type="short">
+     <view>{{shorts.length}}条短评论</view>
+     <image src="../../icons/arrow1.png" class="comment-arrow" wx:if="{{isOpen2==true}}"></image>
+     <image src="../../icons/arrow2.png" class="comment-arrow" wx:elif="{{isOpen2==false}}"></image>
+  </view>
+  <view wx:for="{{shorts}}" wx:key="" class="comment-item" wx:if="{{isOpen2}}">
+    <image src="{{item.avatar}}" class="comment-avatar"></image>
+    <view class="comment-info">
+       <view class="comment-author">{{item.author}}</view> 
+       <view class="comment-cont">{{item.content}}</view> 
+       <view class="comment-time">{{item.time}}</view> 
+       <view class="comment-zan">
+          <image src="../../icons/zan.png"></image>
+          <text>{{item.likes}}</text>
+       </view>
+    </view>
+  </view>
+</view>

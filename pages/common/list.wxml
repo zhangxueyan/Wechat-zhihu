@@ -1,0 +1,28 @@
+   
+  <template name="list">
+   <view class='news-container'>
+    <view class='news-titl'>今日新闻</view>
+    <view class='news-items' wx:for="{{list}}" wx:key="" style="display:none;">
+        <view class='news-date'>{{item.date}}</view> 
+        <view class="news-item" wx:for="{{item.stories}}" wx:for-item ="childItem" wx:key="">
+           <navigator url="/pages/detail/detail?id={{childItem.id}}" class="news-link">
+            <view class='news-brief' >{{index}}{{childItem.title}}</view>
+            <image class='news-pic' src="{{childItem.images[0]}}"/>
+            </navigator>
+        </view>
+    </view>
+     
+    <!-- 方式二 -->
+    <view class='news-titl'>今日新闻</view>
+    <view class="news-item" wx:for="{{allNews}}"  wx:key="">
+        <navigator url="/pages/detail/detail?id={{item.id}}&next={{allNews[index+1].id}}" class="news-link">
+          <view class='news-brief' >{{index}}{{item.title}}</view>
+          <image class='news-pic' src="{{item.images[0]}}"/>
+        </navigator>
+    </view>
+
+
+
+
+   </view>
+  </template>

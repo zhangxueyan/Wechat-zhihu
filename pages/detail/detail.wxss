@@ -1,0 +1,26 @@
+/**entry.wxss**/
+.art-item{
+  font-size:28rpx;
+  padding:0 20rpx 20rpx;
+}
+.art-img{
+  display:block;
+  width:100%;
+}
+.art-title{
+  font-size:32rpx;
+  line-height:2;
+}
+.detail-bot{
+  width:100%;
+  text-align:center;
+  background:#fff;
+  position:fixed;
+  bottom:0;
+  left:0;
+  display:flex;
+}
+.bot-item{
+  width:25%;
+  line-height:100rpx;
+}

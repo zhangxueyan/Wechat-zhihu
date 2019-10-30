@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<import src="../wxParse/wxParse.wxml"/>
+<view class="container">
+     <view class='art-item'>
+        <image src="{{art.image}}" class="art-img"/>
+        <view class="art-title">{{art.title}}</view>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+     </view>
+     <view class="detail-bot">
+       <view class="bot-item" bindtap="goBack">返回</view>
+       <view class="bot-item" bindtap="goNext">下一条</view>
+       <view class="bot-item">点赞{{extra.popularity}}</view>
+       <view class="bot-item" bindtap="goComments">评论{{extra.comments}}</view>
+     </view>
+</view>

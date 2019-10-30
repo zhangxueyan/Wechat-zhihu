@@ -1,0 +1,12 @@
+   
+   <template name="banner">
+   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" 
+    interval="{{interval}}"  duration="{{duration}}">
+      <swiper-item wx:for-items="{{banner}}" wx:key="" >
+         <navigator url="/pages/detail/detail?id={{item.id}}">
+           <image class="slide-image" src="{{item.image}}"/>
+           <view class='slide-title'>{{item.title}}</view>
+         </navigator>
+      </swiper-item>
+   </swiper>
+  </template>

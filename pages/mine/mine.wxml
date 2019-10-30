@@ -1,0 +1,6 @@
+<!--list.wxml-->
+<view class="container">
+
+  <view>{{msg}}</view>
+  
+</view>

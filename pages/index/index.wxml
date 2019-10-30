@@ -1,0 +1,10 @@
+<!--index.wxml-->
+
+<import src="../common/list.wxml"/>
+<import src="../common/banner.wxml"/>
+<view class="container">
+  <scroll-view scroll-y='true' style="height:100%;" bindscrolltolower='loadMore'>
+   <template is="banner" data="{{banner}}"></template>
+   <template is="list" data="{{list,allNews}}"></template>
+  </scroll-view>
+</view>

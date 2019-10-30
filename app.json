@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+        "pages/comments/comments",
+        "pages/theme/theme",
+        "pages/detail/detail",
+   
+
+
+    "pages/mine/mine"
+
+  ],
+  
+"tabBar": {
+  "color": "#000000",
+  "selectedColor": "#d81e06",
+  "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "icons/icon1.png",
+      "selectedIconPath": "icons/icon1_act.png"
+    },
+    {
+      "pagePath": "pages/theme/theme",
+      "text": "热门",
+      "iconPath": "icons/icon2.png",
+      "selectedIconPath": "icons/icon2_act.png"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "icons/icon3.png",
+      "selectedIconPath": "icons/icon3_act.png"
+    }
+  ]
+},
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#006cff",
+    "navigationBarTitleText": "知乎日报"
+  },
+  "sitemapLocation": "sitemap.json"
+}
